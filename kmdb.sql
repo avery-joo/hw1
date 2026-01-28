@@ -128,13 +128,6 @@ CREATE TABLE movies (
     studio_id INTEGER
 );
 
--- CREATE TABLE characters (
---     id INTEGER PRIMARY KEY AUTOINCREMENT,
---     name TEXT,
---     movie_id INTEGER,
---     actor_id INTEGER
--- );
-
 CREATE TABLE castings (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     character_name TEXT,
@@ -149,55 +142,52 @@ CREATE TABLE castings (
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
 
--- INSERT INTO studios (name)
--- VALUES ('Warner Bros');
+INSERT INTO studios (name)
+VALUES ('Warner Bros');
 
--- INSERT INTO agents (name)
--- VALUES
---     ('Susan'),
---     ('David'),
---     ('Alex');
+INSERT INTO agents (name)
+VALUES
+    ('Susan'),
+    ('David'),
+    ('Alex');
 
--- INSERT INTO actors (name, agent_id)
--- VALUES
---     ('Christian Bale', 1),
---     ('Michael Caine', 2),
---     ('Liam Neeson', 3),
---     ('Katie Holmes', 1),
---     ('Gary Oldman', 2),
---     ('Heath Ledger', 3),
---     ('Aaron Eckhart', 1),
---     ('Maggie Gyllenhaal', 2),
---     ('Tom Hardy', 3),
---     ('Joseph Gordon-Levitt', 1),
---     ('Anne Hathaway', 2);
+INSERT INTO actors (name, agent_id)
+VALUES
+    ('Christian Bale', 1),
+    ('Michael Caine', 2),
+    ('Liam Neeson', 3),
+    ('Katie Holmes', 1),
+    ('Gary Oldman', 2),
+    ('Heath Ledger', 3),
+    ('Aaron Eckhart', 1),
+    ('Maggie Gyllenhaal', 2),
+    ('Tom Hardy', 3),
+    ('Joseph Gordon-Levitt', 1),
+    ('Anne Hathaway', 2);
 
--- INSERT INTO movies (title, year_released, mpaa_rating, studio_id)
--- VALUES
---     ('Batman Begins', 2005, 'PG-13', 1),
---     ('The Dark Knight', 2008, 'PG-13', 1),
---     ('The Dark Knight Rises', 2012, 'PG-13', 1);
+INSERT INTO movies (title, year_released, mpaa_rating, studio_id)
+VALUES
+    ('Batman Begins', 2005, 'PG-13', 1),
+    ('The Dark Knight', 2008, 'PG-13', 1),
+    ('The Dark Knight Rises', 2012, 'PG-13', 1);
 
--- -- INSERT INTO characters (name, movie_id, actor_id)
--- -- VALUES
--- --     ('Bruce Wayne', 1, 1),
--- --     ('Alfred', 1, 2),
--- --     ('Ra''s Al Ghul', 1, 3),
--- --     ('Rachel Dawes', 1, 4),
--- --     ('Commissioner Gordon', 1, 5),
--- --     (2, 'Bruce Wayne', 1),
--- --     (2, 'Joker', 6),
--- --     (2, 'Harvey Dent', 7),
--- --     (2, 'Alfred', 2),
--- --     (2, 'Rachel Dawes', 8),
--- --     (3, 'Bruce Wayne', 1),
--- --     (3, 'Commissioner Gordon', 5),
--- --     (3, 'Bane', 9),
--- --     (3, 'John Blake', 10),
--- --     (3, 'Selina Kyle', 11);
-
-
-
+INSERT INTO castings (character_name, movie_id, actor_id)
+VALUES
+    ('Bruce Wayne', 1, 1),
+    ('Alfred', 1, 2),
+    ('Ra''s Al Ghul', 1, 3),
+    ('Rachel Dawes', 1, 4),
+    ('Commissioner Gordon', 1, 5),
+    ('Bruce Wayne', 2, 1),
+    ('Joker', 2, 6),
+    ('Harvey Dent', 2, 7),
+    ('Alfred', 2, 2),
+    ('Rachel Dawes', 2, 8),
+    ('Bruce Wayne', 3, 1),
+    ('Commissioner Gordon', 3, 5),
+    ('Bane', 3, 9),
+    ('John Blake', 3, 10),
+    ('Selina Kyle', 3, 11);
 
 
 -- Prints a header for the movies output
