@@ -205,6 +205,11 @@ WHERE id = 11;
 -- ***TODO!***
 -- The SQL statement for the movies output goes here.
 
+SELECT name, year_released, mpaa_rating, studios.name
+FROM movies
+JOIN studios ON movies.studio_id = studios.id
+;
+
 -- Example output:
 -- Movies
 -- ======
@@ -220,6 +225,12 @@ WHERE id = 11;
 
 -- ***TODO!***
 -- The SQL statement for the cast output goes here.
+
+SELECT title, actors.name, character_name
+FROM movies
+JOIN castings ON movies.id = castings.movie_id
+JOIN actors ON castings.actor_id = actors.id
+;
 
 -- Example output:
 -- Top Cast
@@ -248,6 +259,12 @@ WHERE id = 11;
 
 -- ***TODO!***
 -- The SQL statement for the represented actor(s) output goes here.
+
+SELECT actors.name
+FROM actors
+JOIN agents ON actors.agent_id = agents.id
+WHERE agents.name = 'Susan'
+
 
 -- Example output:
 -- Represented by agent
