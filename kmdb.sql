@@ -189,6 +189,13 @@ VALUES
     ('John Blake', 3, 10),
     ('Selina Kyle', 3, 11);
 
+INSERT INTO agents (name)
+VALUES
+    ('Avery'); 
+
+UPDATE actors
+SET agent_id = 4
+WHERE id = 11;
 
 -- Prints a header for the movies output
 .print "Movies"
